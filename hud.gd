@@ -101,10 +101,10 @@ func _on_save_btn_pressed():
 func check_if_doc_exists(player_name) -> int:
 	var query: FirestoreQuery = FirestoreQuery.new()
 	query.from("scores").where("name", FirestoreQuery.OPERATOR.EQUAL, player_name)
-	var document: FirestoreDocument = await Firebase.Firestore.query(query).result_query
+	var document: Array = await Firebase.Firestore.query(query).result_query
 	print(document)
-	if document != null:
-		return document.doc_fields.score
+	if document.size() > 0:
+		return document[0].doc_fields.score
 	return 0
 
 
