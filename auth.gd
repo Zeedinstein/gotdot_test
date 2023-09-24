@@ -19,11 +19,8 @@ func _on_register_pressed():
 	Firebase.Auth.signup_with_email_and_password(email, password)
 
 func _on_FirebaseAuth_login_succeeded(_auth):
-	print(_auth)
-	var user = await Firebase.Auth.get_user_data()
-	print(user)
 	logged_in.emit()
-	
+
 func on_login_failed(error_code, message):
 	print("error code: " + str(error_code))
 	print("message: " + str(message))

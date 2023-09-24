@@ -63,6 +63,23 @@ theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_if5ww")
 text = "Start"
 
+[node name="CloseHighScoreBtn" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -136.0
+offset_top = -140.0
+offset_right = 144.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_x8p3e")
+theme_override_font_sizes/font_size = 64
+shortcut = SubResource("Shortcut_if5ww")
+text = "Close"
+
 [node name="SaveBtn" type="Button" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
@@ -122,7 +139,24 @@ offset_bottom = 447.0
 theme = SubResource("Theme_q2s5y")
 text = "Name"
 
+[node name="HighScoreList" type="ItemList" parent="."]
+offset_left = 40.0
+offset_top = 64.0
+offset_right = 440.0
+offset_bottom = 512.0
+
+[node name="ShowHighScoreBtn" type="Button" parent="."]
+offset_left = 104.0
+offset_top = 456.0
+offset_right = 384.0
+offset_bottom = 560.0
+theme_override_fonts/font = ExtResource("1_x8p3e")
+theme_override_font_sizes/font_size = 32
+text = "High Score List"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CloseHighScoreBtn" to="." method="_on_close_high_score_btn_pressed"]
 [connection signal="pressed" from="SaveBtn" to="." method="_on_save_btn_pressed"]
 [connection signal="pressed" from="SkipBtn" to="." method="_on_skip_btn_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[connection signal="pressed" from="ShowHighScoreBtn" to="." method="_on_show_high_score_pressed"]

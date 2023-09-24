@@ -10,7 +10,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
@@ -20,7 +20,7 @@ func game_over():
 	$HUD.show_game_over()
 	$Music.stop()
 	$DeathSound.play()
-	
+
 func new_game():
 	get_tree().call_group("mobs", "queue_free")
 	score = 0

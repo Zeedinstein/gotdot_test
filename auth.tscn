@@ -21,6 +21,7 @@ theme = SubResource("Theme_v5a0f")
 script = ExtResource("1_ow8dp")
 
 [node name="TitleLbl" type="Label" parent="."]
+layout_mode = 0
 offset_left = 96.0
 offset_top = 120.0
 offset_right = 381.0
@@ -29,6 +30,7 @@ theme_override_font_sizes/font_size = 64
 text = "Welcome"
 
 [node name="EmailLbl" type="Label" parent="."]
+layout_mode = 0
 offset_left = 67.0
 offset_top = 328.0
 offset_right = 216.0
@@ -36,6 +38,7 @@ offset_bottom = 351.0
 text = "Email"
 
 [node name="PassLbl" type="Label" parent="."]
+layout_mode = 0
 offset_left = 67.0
 offset_top = 392.0
 offset_right = 256.0
@@ -43,16 +46,19 @@ offset_bottom = 418.0
 text = "Password"
 
 [node name="email" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 67.0
 offset_top = 352.0
 offset_right = 424.0
 offset_bottom = 383.0
 
 [node name="password" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 67.0
 offset_top = 416.0
 offset_right = 424.0
 offset_bottom = 447.0
+secret = true
 
 [node name="login" type="Button" parent="."]
 layout_mode = 1
