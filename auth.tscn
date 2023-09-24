@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://knhcb1m3uyqs"]
+
+[ext_resource type="Script" path="res://auth.gd" id="1_ow8dp"]
+[ext_resource type="FontFile" uid="uid://3xrogjijpwnu" path="res://fonts/Xolonium-Regular.ttf" id="1_rseos"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_byvqv"]
+
+[sub_resource type="Theme" id="Theme_v5a0f"]
+default_font = ExtResource("1_rseos")
+default_font_size = 20
+
+[node name="Auth" type="Control"]
+material = SubResource("CanvasItemMaterial_byvqv")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_v5a0f")
+script = ExtResource("1_ow8dp")
+
+[node name="TitleLbl" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 120.0
+offset_right = 381.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 64
+text = "Welcome"
+
+[node name="EmailLbl" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 328.0
+offset_right = 216.0
+offset_bottom = 351.0
+text = "Email"
+
+[node name="PassLbl" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 392.0
+offset_right = 256.0
+offset_bottom = 418.0
+text = "Password"
+
+[node name="email" type="LineEdit" parent="."]
+offset_left = 67.0
+offset_top = 352.0
+offset_right = 424.0
+offset_bottom = 383.0
+
+[node name="password" type="LineEdit" parent="."]
+offset_left = 67.0
+offset_top = 416.0
+offset_right = 424.0
+offset_bottom = 447.0
+
+[node name="login" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -208.0
+offset_right = -24.0
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Login"
+
+[node name="signup" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -208.0
+offset_right = 216.0
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Sign Up"
+
+[connection signal="pressed" from="login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="signup" to="." method="_on_register_pressed"]

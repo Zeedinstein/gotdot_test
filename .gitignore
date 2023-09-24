@@ -1,0 +1,4 @@
+# Godot 4+ specific ignores
+.godot/
+addons/godot-firebase/.env
+.DS_Store
